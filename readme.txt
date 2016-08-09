@@ -34,7 +34,11 @@ git入门手册（资料来源：www.liaoxuefeng.com）
 3.远程仓库
 	$ ssh-keygen -t rsa -C "youremail@example.com"
 		创建ssh key
+	$ ssh -T git@github.com
+		验证是否远处链接成功
 	$ git remote add origin git@github.com:linwuzheng/learngit.git
 		关联远程仓库
 	$ git push -u origin master
 		上传到远程仓库
+	$ git clone git@github.com:linwuzheng/gitskills.git
+		从远处仓库下载到本地工作区
