@@ -1,10 +1,10 @@
-package a;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Administrator http://www.cnblogs.com/liuling/p/2013-7-24-01.html
+ *  http://www.cnblogs.com/liuling/p/2013-7-24-01.html
  */
 public class paixu {
 
@@ -23,90 +23,60 @@ public class paixu {
 	 */
 	public static void main(String[] args) {
 		int[] a = { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
-		System.out.println("排序之前：");
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		print(a, "排序之前：");
+
 		// 冒泡排序
-		a = new int[]{ 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
+		a = new int[] { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
 		bubble_sort(a);
-		System.out.println();
-		System.out.println("冒泡排序：");
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		print(a, "冒泡排序：");
 
 		// 快速排序
-		a = new int[]{ 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
+		a = new int[] { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
 		quick_sort(a);
-		System.out.println();
-		System.out.println("快速排序：");
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		print(a, "快速排序：");
 
 		// 直接插入排序
-		a = new int[]{ 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
+		a = new int[] { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
 		insert_sort1(a);
-		System.out.println();
-		System.out.println("直接插入排序：");
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		print(a, "直接插入排序：");
 
 		// 二分插入排序
-		a = new int[]{ 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
+		a = new int[] { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
 		insert_sort2(a);
-		System.out.println();
-		System.out.println("二分插入排序：");
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		print(a, "二分插入排序：");
 
 		// 希尔排序
-		a = new int[]{ 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
+		a = new int[] { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
 		shell_sort(a);
-		System.out.println();
-		System.out.println("希尔排序：");
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		print(a, "希尔排序：");
 
 		// 简单的选择排序
-		a = new int[]{ 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
+		a = new int[] { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
 		select_sort(a);
-		System.out.println();
-		System.out.println("简单的选择排序：");
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		print(a, "简单的选择排序：");
 
 		// 堆排序
-		a = new int[]{ 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
+		a = new int[] { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
 		heap_sort(a);
-		System.out.println();
-		System.out.println("堆排序：");
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		print(a, "堆排序：");
 
 		// 归并排序
-		a = new int[]{ 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
+		a = new int[] { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
 		merge_sort(a);
-		System.out.println();
-		System.out.println("归并排序：");
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		print(a, "归并排序：");
 
 		// 基数排序
-		a = new int[]{ 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
+		a = new int[] { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1, 8 };
 		single_sort(a);
-		System.out.println();
-		System.out.println("基数排序：");
+		print(a, "基数排序：");
+	}
+
+	public static void print(int[] a, String value) {
+		System.out.println(value);
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i] + " ");
 		}
+		System.out.println();
 	}
 
 	/**
@@ -119,7 +89,7 @@ public class paixu {
 	 * @param array
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	private static void single_sort(int[] array) {
+	public static void single_sort(int[] array) {
 		// 找到最大数，确定要排序几趟
 		int max = 0;
 		for (int i = 0; i < array.length; i++) {
@@ -224,8 +194,7 @@ public class paixu {
 	 * @param a
 	 */
 	public static void bubble_sort(int[] a) {
-		boolean isChanged = true; // 通过一个boolean
-									// isChanged，如果一次循环中没有交换过元素，则说明已经排好序；
+		boolean isChanged = true; // 通过一个isChanged，如果一次循环中没有交换过元素，则说明已经排好序；
 		for (int i = 0; i < a.length && isChanged; i++) {
 			isChanged = false;
 			for (int j = i + 1; j < a.length; j++) {
@@ -354,8 +323,7 @@ public class paixu {
 	 * 即所有记录放在同一组中进行直接插入排序为止。该方法实质上是一种分组插入方法。
 	 * 
 	 * @see 希尔排序是不稳定
-	 * @param arr
-	 * @return
+	 * @param a
 	 */
 	public static void shell_sort(int[] a) {
 		int d = a.length;
