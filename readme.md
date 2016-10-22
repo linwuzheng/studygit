@@ -52,3 +52,6 @@
 		上传到远程仓库
 	$ git clone git@github.com:linwuzheng/gitskills.git
 		从远处仓库下载到本地工作区
+
+
+[github版本下载](https://desktop.github.com)
