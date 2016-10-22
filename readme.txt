@@ -1,10 +1,19 @@
-git入门手册（资料来源：www.liaoxuefeng.com）
-1.安装git
-	本人使用windows环境，所以只要下载，然后傻瓜式安装就行。下载地址：https://git-for-windows.github.io
+#git入门手册（资料来源：www.liaoxuefeng.com）
+##1.安装git
+>	* 本人使用windows环境，所以只要下载，然后傻瓜式安装就行。下载地址：https://git-for-windows.github.io，安装成功后，右键会有git的一些选项。
 	配置全局环境变量
 		$ git config --global user.name 'your name'
 		$ git config --global user.email 'email@example.com'
-2.git常用命令
+	* linux下安装git
+    首先检测是否安装过git
+    `
+    $ git
+    The program 'git' is currently not installed. You can install it by typing:
+    sudo apt-get install git
+    `
+    有如上提示，说明未安装git，输入`sudo apt-get install git`命令进行安装，如此简单。都不用下载链接，linux自动帮你完成。
+    
+##2.git常用命令
 	首先要创建版本库（也叫本地仓库），仓库就是普通文件夹，可以右键创建文件夹，也可以使用命令mkdir创建。
 	路径切换到仓库下：
 	$ git init
@@ -31,7 +40,7 @@ git入门手册（资料来源：www.liaoxuefeng.com）
 		文件还原，从仓库还原到本地工作区
 	$ git rm <file>
 		删除仓库文件，需结合git commit命令使用
-3.远程仓库
+##3.远程仓库
 	$ ssh-keygen -t rsa -C "youremail@example.com"
 		创建ssh key
 	$ ssh -T git@github.com
