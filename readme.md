@@ -1,10 +1,10 @@
 #git入门手册（资料来源：www.liaoxuefeng.com）
 ##1.安装git
->	* 本人使用windows环境，所以只要下载，然后傻瓜式安装就行。下载地址：https://git-for-windows.github.io，安装成功后，右键会有git的一些选项。
+* 本人使用windows环境，所以只要下载，然后傻瓜式安装就行。下载地址：https://git-for-windows.github.io，安装成功后，右键会有git的一些选项。
 	配置全局环境变量
 		$ git config --global user.name 'your name'
 		$ git config --global user.email 'email@example.com'
-	* linux下安装git
+* linux下安装git
     首先检测是否安装过git
     `
     $ git
