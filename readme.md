@@ -1,20 +1,19 @@
-#git入门手册（资料来源：[liaoxuefeng](www.liaoxuefeng.com）)
+#git入门手册（资料来源：[liaoxuefeng](www.liaoxuefeng.com))
 ##1.安装git
+
  1.1 本人使用windows环境，所以只要下载，然后傻瓜式安装就行。下载地址：[git-for-windows](https://git-for-windows.github.io)，安装成功后，右键会有git的一些选项。
-
 	配置全局环境变量
-	`
-		$ git config --global user.name \'your name\'
-		$ git config --global user.email \'email@example.com\'
-	`
+	```
+	$ git config --global user.name \'your name\'
+	$ git config --global user.email \'email@example.com\'
+	```
  1.2 linux下安装git
-
     首先检测是否安装过git
-    `
+    ```
     $ git
     The program 'git' is currently not installed. You can install it by typing:
     sudo apt-get install git
-    `
+    ```
     有如上提示，说明未安装git，输入`sudo apt-get install git`命令进行安装，如此简单。都不用下载链接，linux自动帮你完成。
     
 ##2.git常用命令
