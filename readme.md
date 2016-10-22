@@ -9,11 +9,10 @@
 	```
 	
  1.2 linux下安装git
- 
     首先检测是否安装过git
     ```
     $ git
-    The program 'git' is currently not installed. You can install it by typing:
+    The program \'git\' is currently not installed. You can install it by typing:
     sudo apt-get install git
     ```
     有如上提示，说明未安装git，输入`sudo apt-get install git`命令进行安装，如此简单。都不用下载链接，linux自动帮你完成。
