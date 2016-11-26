@@ -1,0 +1,109 @@
+	h2{
+		text-align: center;
+		color: red;
+		font-size: 24px;
+	}
+	.header{
+		border-top: 1px solid #ccc;
+		text-align: center;
+	}
+
+	.layout{
+		width: 750px;
+		height: 300px;
+		margin: 50px auto;
+		border: 1px solid #ccc;
+		border-top: 0;
+		overflow: hidden;
+	}
+	.layout li{
+		width: 20%;
+		height: 150px;
+		line-height: 150px;
+		float: left;
+		text-align: center;
+	}
+	.layout li a{
+		background-color: #f4f4f4;
+		color: #888;
+		height: 150px;
+		border-top: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+		/* margin-left: -1px; */
+		display: block;
+	}
+	.layout li a:hover{
+		background-color: #fff;
+		color: red;
+	}
+
+	@font-face{
+		font-family: "imooc-icon";
+		src: url("../fonts/icomoon.eot"); /* IE9 兼容模式 */
+		src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype")
+			 ,url("../fonts/icomoon.woff") format("woff")
+			 ,url("../fonts/icomoon.ttf") format("truetype")
+			 ,url("../fonts/icomoon.svg") format("svg");
+		font-weight: normal;
+		font-style: normal;
+	}
+	.imooc-icon{
+		font-family: "imooc-icon";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 64px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+
+/* .yt-overlay-main .yt-overlay-end span.move{
+	transform:rotate(7200deg);
+	-moz-transform:rotate(7200deg);
+	-webkit-transform:rotate(7200deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=20);
+} */
+
+
+
+@font-face {font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot'); /* IE9*/
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), 
+    url('../fonts/iconfont.woff') format('woff'),  
+    url('../fonts/iconfont.ttf') format('truetype'), 
+    url('../fonts/iconfont.svg#iconfont') format('svg');  
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+.yanzhengma:before{
+	content: "\e650";
+}
+.tuichudenglu:before{
+	content: "\e64f";
+}
+.pinglun11:before{
+	content: "\e64c";
+}
+.shouji:before{
+	content: "\e641";
+}
+.navbaradd2x:before{
+	content: "\e615";
+}
+.iconfontxiangxia:before{
+	content: "\e63b";
+}
+.minebodysiteshouhuo2x:before{
+	content: "\e630";
+}
+.boylikzan2x:before{
+	content: "\e633";
+}
+.olphone2x:before{
+	content: "\e617";
+}
