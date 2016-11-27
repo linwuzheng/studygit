@@ -46,12 +46,13 @@
 		创建ssh key
 	$ ssh -T git@github.com
 		验证是否远处链接成功
-	$ git remote add origin git@github.com:linwuzheng/learngit.git
+	$ git remote add origin git@github.com:msforest/learngit.git
 		关联远程仓库
 	$ git push -u origin master
 		上传到远程仓库
-	$ git clone git@github.com:linwuzheng/gitskills.git
+	$ git clone git@github.com:msforest/gitskills.git
 		从远处仓库下载到本地工作区
 
+PS:如果在github上修改，本地没有同步的话，本地仓库就无法提交到github上。所以，提交之前需要先将本地和远程数据同步，然后进行提交
 
 [github版本下载](https://desktop.github.com)
