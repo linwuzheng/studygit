@@ -1,10 +1,11 @@
-//自由驱动工作室
-//作者：林鑫
-$(function(){
-        var Initials=$('.initials');
+var app = angular.module('app',[]);
+
+app.service('InitialSort', function(){
+	this.sort = function(html){
+		var Initials=$('.initials');
         var LetterBox=$('#letter');
         Initials.find('ul').append('<li>A</li><li>B</li><li>C</li><li>D</li><li>E</li><li>F</li><li>G</li><li>H</li><li>I</li><li>J</li><li>K</li><li>L</li><li>M</li><li>N</li><li>O</li><li>P</li><li>Q</li><li>R</li><li>S</li><li>T</li><li>U</li><li>V</li><li>W</li><li>X</li><li>Y</li><li>Z</li><li>#</li>');
-        initials2();
+        initials2(html);
 
         $(".initials ul li").click(function(){
             var _this=$(this);
@@ -38,7 +39,67 @@ $(function(){
         Initials.height(InitHeight);
         var LiHeight=InitHeight/28;
         Initials.find('li').height(LiHeight);
-})
+	}
+});
+
+app.directive('initialSort', ['$compile', 'InitialSort', function($compile, InitialSort){
+	return {
+		restrict:'EC',
+		template: `<div>
+						<div id="letter" ></div>
+						<div class="sort_box"></div>
+						<div class="initials">
+							<ul>
+								<li><img src="img/068.png"></li>
+							</ul>
+						</div>
+					</div>`,
+		link:function(scope, element, attr){
+			var html = [], item=null;
+		    for(var i = 0,len = scope.chineseArr.length; i < len; i++){
+		    	item = chineseArr[i];
+		        html += `<div class="sort_list" ng-click=payee(${JSON.stringify(item)})><div class="num_name">${item.name}</div></div>`;
+		        item = null;
+		    }
+			InitialSort.sort(html);
+			$compile(element.contents())(scope);  //使用compile对dom进行再次编译
+		}
+	}
+}])
+;
+app.controller('txlCtrl', ['$scope', function($scope){
+		$scope.chineseArr = [
+			            {"id":1,name:"涨水"},
+			            {"id":2,name:"美女"},
+			            {"id":3,name:"准备"},
+			            {"id":4,name:"请问"},
+			            {"id":5,name:"水电费"},
+			            {"id":6,name:"不能"},
+			            {"id":7,name:"更好"},
+			            {"id":8,name:"熬吧"},
+			            {"id":9,name:"凉快了"},
+			            {"id":10,name:"潍坊"},
+			            {"id":11,name:"拉屎"},
+			            {"id":12,name:"胸围"},
+			            {"id":13,name:"漂亮"},
+			            {"id":14,name:"离开"},
+			            {"id":15,name:"额无法"},
+			            {"id":16,name:"123"},
+			            {"id":17,name:"+sdkl"},
+			            {"id":18,name:"AB"}
+			            ];
+
+			$scope.init = function(){
+				$scope.test = 'test';
+			}
+			$scope.payee = function(item){
+				console.log(item);
+			}
+}])
+
+
+
+
 
 var chineseArr = [
             {"id":1,name:"涨水"},
@@ -60,15 +121,15 @@ var chineseArr = [
             {"id":17,name:"+sdkl"},
             {"id":18,name:"AB"}
             ];
-function initials2(){
+function initials2(html){
     var SortBox=$(".sort_box");
 
-    var html = [];
+   /* var html = [];
     for(var i = 0,len = chineseArr.length; i < len; i++){
         html += `<div class="sort_list">
                     <div class="num_name">${chineseArr[i].name}</div>
                 </div>`;
-    }
+    }*/
     var SortList=$(html);
 
     SortList.sort(asc_sort).appendTo('.sort_box');
@@ -180,14 +241,7 @@ function initials2(){
                 break;
         }
     };
-
-
 }
-
-
-
-
-
 
 function initials() {//公众号排序
     var SortList=$(".sort_list");
