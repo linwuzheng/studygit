@@ -55,14 +55,20 @@ app.directive('initialSort', ['$compile', 'InitialSort', function($compile, Init
 						</div>
 					</div>`,
 		link:function(scope, element, attr){
-			var html = [], item=null;
-		    for(var i = 0,len = scope.chineseArr.length; i < len; i++){
-		    	item = chineseArr[i];
-		        html += `<div class="sort_list" ng-click=payee(${JSON.stringify(item)})><div class="num_name">${item.name}</div></div>`;
-		        item = null;
-		    }
-			InitialSort.sort(html);
-			$compile(element.contents())(scope);  //使用compile对dom进行再次编译
+			//对新旧值进行监听保证数据变化时，指令也要更新
+			scope.$watch('chineseArr',function(newValue,oldValue){
+                 if (newValue){
+                    $(element).find('.sort_box').html("");  //删除原有html 
+                    var html = [], item=null;
+                    for(var i = 0,len = scope.chineseArr.length; i < len; i++){
+                        item = scope.chineseArr[i];
+                        html += `<div class="sort_list" ng-click=payee(${JSON.stringify(item)})><div class="num_name">${item.name}</div></div>`;
+                        item = null;
+                    }
+                    InitialSort.sort(html, scope.chineseArr);
+                    $compile(element.contents())(scope.$new());  //使用compile对dom进行再次编译
+                 }
+            });
 		}
 	}
 }])
