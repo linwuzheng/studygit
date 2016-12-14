@@ -23,6 +23,8 @@
 		查看当前路径下的所有文件，包括隐藏文件
 	$ git add <file>
 		把文件添加到仓库
+	$ git add --all
+		把所有文件添加到仓库
 	$ git commit -m 'xxx'
 		把文件提交到仓库。 -m 是添加备注信息
 	$ git status
@@ -52,7 +54,8 @@
 		上传到远程仓库
 	$ git clone git@github.com:msforest/gitskills.git
 		从远处仓库下载到本地工作区
-
+	$ git clone git@github.com:msforest/gitskills.git gitskills
+		从远处仓库下载到本地指定目录下
 PS:如果在github上修改，本地没有同步的话，本地仓库就无法提交到github上。所以，提交之前需要先将本地和远程数据同步，然后进行提交
 
 [github版本下载](https://desktop.github.com)
