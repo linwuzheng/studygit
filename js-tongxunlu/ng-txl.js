@@ -7,7 +7,7 @@ app.service('InitialSort', function(){
         Initials.find('ul').append('<li>A</li><li>B</li><li>C</li><li>D</li><li>E</li><li>F</li><li>G</li><li>H</li><li>I</li><li>J</li><li>K</li><li>L</li><li>M</li><li>N</li><li>O</li><li>P</li><li>Q</li><li>R</li><li>S</li><li>T</li><li>U</li><li>V</li><li>W</li><li>X</li><li>Y</li><li>Z</li><li>#</li>');
         initials2(html);
 
-        $(".initials ul li").click(function(){
+        $(".initials ul li").on('click', function(){
             var _this=$(this);
             var LetterHtml=_this.html();
             LetterBox.html(LetterHtml).fadeIn();
@@ -32,7 +32,41 @@ app.service('InitialSort', function(){
                     $('html,body').animate({scrollTop: LetterTop-45+'px'}, 300);
                 }
             }
-        })
+        });
+	$('.initials ul').on('touchmove', function(event){
+            event.preventDefault();
+            var x = event.originalEvent.targetTouches[0].clientX;
+            var y = event.originalEvent.targetTouches[0].clientY;
+            var target = document.elementFromPoint(x,y);
+            if(!target) return ;
+
+            var LetterHtml=target.innerHTML,
+                arr = '<img src="images/star.png">abcdefghijklmnopqrstuvwxyz#';
+            if(arr.indexOf(LetterHtml.toLowerCase()) === -1) return ;
+
+            console.log(LetterHtml)
+            LetterBox.html(LetterHtml).fadeIn();
+
+            if('<img src="img/068.png">' === LetterHtml){
+                $('html,body').animate({scrollTop: '0px'}, 0);//点击第一个滚到顶部
+            }else if('#' === LetterHtml){
+                var DefaultTop=$('#default').position().top;
+                $('html,body').animate({scrollTop: DefaultTop+'px'}, 0);//点击最后一个滚到#号
+            }else{
+                var letter = LetterHtml;
+                if($('#'+letter).length>0){
+                    var LetterTop = $('#'+letter).position().top;
+                    $('html,body').animate({scrollTop: LetterTop-45+'px'}, 0);
+                }
+            }
+        }).on('touchstart', function(e){
+            Initials.css('background','rgba(145,145,145,0.6)');
+        }).on('touchend', function(e){
+            setTimeout(function(){
+                Initials.css('background','rgba(145,145,145,0)');
+                LetterBox.fadeOut();
+            },500);
+        });
 
         var windowHeight=$(window).height();
         var InitHeight=windowHeight-45;
