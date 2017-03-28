@@ -1,0 +1,19 @@
+<div class="cities">
+    <div class="hot">
+        <h2>热门城市:</h2>
+        <div class="bottom">
+            <ul>
+                <li ng-repeat="city in hotCities"><a href="" ui-sref="city({city: city})">{{city}}</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="all">
+        <h2>全部城市:</h2>
+        <div class="bottom">
+            <ul>
+                <!-- <li class="letter">A.</li>
+                        <li class="list">北京</li> -->
+            </ul>
+        </div>
+    </div>
+</div>

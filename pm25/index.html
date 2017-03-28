@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pm25.in</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/pm25.css">
+    <script type="text/javascript" src="../angular/js/jquery.js"></script>
+    <script type="text/javascript" src="../angular/js/angular.js"></script>
+    <script type="text/javascript" src="../angular/js/angular-ui-router.js"></script>
+    <script type="text/javascript" src="js/hz-py.js"></script>
+</head>
+<body ng-app='pm25' ng-cloak>
+    <div class="container">
+        <header>
+            <nav>
+                <a href=''><img src="images/logo.png" alt="logo"></a>
+                <ul>
+                    <li><a href=''>首页</a></li>
+                    <li><a href=''>排行榜</a></li>
+                    <li><a href=''>api文档</a></li>
+                    <li><a href=''>赞助我们</a></li>
+                    <li><a href=''>关于</a></li>
+                </ul>
+                <a id="menu-toggle" class="menu-toggle"><span>menu</span></a>
+            </nav>
+            <div class="banner">
+                <div class="slogan"><img src="images/slogan.png" alt="slogan"></div>
+                <div class="logo"><img src="images/pm25_logo.png" alt="pm25_logo"></div>
+            </div>
+        </header>
+        <div ui-view></div>
+        <footer>
+            <section class="left">
+                <h2>PM2.5百科</h2>
+                <ul>
+                    <li><a href="">什么是PM2.5?</a></li>
+                    <li><a href="">关于PM2.5的十个回答</a></li>
+                    <li><a href="">什么是空气质量指数(AQI)?</a></li>
+                    <li><a href="">空气质量新标准</a></li>
+                </ul>
+            </section>
+            <section class="right">
+                <h2>App下载</h2>
+                <div class="right-block">
+                    <a href=""><img src="images/Chrome_WebStore.png" alt="Chrome浏览器插件"></a><span>Chrome浏览器插件</span></div>
+                <div class="right-block">
+                    <a href=""><img src="images/Market_AppStore.png" alt="IOS客户端"></a><span>IOS客户端</span></div>
+                <div class="right-block">
+                    <a href=""><img src="images/Google_Play.png" alt="Android客户端"></a><span>Android客户端</span></div>
+                <div class="right-block">
+                    <a href=""><img src="images/PM25_Android.png" alt="APK下载"></a><span>APK下载</span></div>
+            </section>
+            <section class="footer">
+                <p>Copyright © 2013-2014 BestApp工作室. All Rights Reserved.</p>
+                <p><a href="">粤ICP备13012270号-6</a></p>
+            </section>
+        </footer>
+    </div>
+<script type="text/javascript">
+    document.getElementById('menu-toggle').addEventListener('click', function(event){
+        var list = document.querySelectorAll('header nav ul');
+        for (var i = list.length - 1; i >= 0; i--) {
+            if(list[i].className){
+                list[i].className = '';
+            }else{
+                list[i].className = 'show';
+            }
+        }
+    }, false);
+</script>
+<script type="text/javascript" src="js/pm25.js"></script>
+</body>
+</html>

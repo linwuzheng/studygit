@@ -18,8 +18,8 @@ $(function(){
                 LetterBox.fadeOut();
             },1000);
 
-            var _index = _this.index()
-            if(_index==0){
+            var _index = _this.index();
+            if(_index===0){
                 $('html,body').animate({scrollTop: '0px'}, 300);//点击第一个滚到顶部
             }else if(_index==27){
                 var DefaultTop=$('#default').position().top;
@@ -31,14 +31,14 @@ $(function(){
                     $('html,body').animate({scrollTop: LetterTop-45+'px'}, 300);
                 }
             }
-        })
+        });
 
         var windowHeight=$(window).height();
         var InitHeight=windowHeight-45;
         Initials.height(InitHeight);
         var LiHeight=InitHeight/28;
         Initials.find('li').height(LiHeight);
-})
+});
 
 var chineseArr = [
             {"id":1,name:"涨水"},
@@ -301,5 +301,5 @@ function initials() {//公众号排序
                 $('#default').after(SortList.eq(i));
                 break;
         }
-    };
+    }
 }
