@@ -50,11 +50,11 @@
 ## 3.远程仓库
 
 	$ ssh-keygen -t rsa -C "youremail@example.com"
-		创建ssh key
-	$ ssh -T git@github.com
-		验证是否远处链接成功
+		创建ssh key，根据提示进行操作，可一直按ENTER键，输出的内容会有密钥生成的路径，将公钥copy到git上		
 	$ git remote add origin git@github.com:msforest/learngit.git
 		关联远程仓库
+	$ ssh -T git@github.com
+		验证是否远程链接成功
 	$ git push -u origin master
 		上传到远程仓库
 	$ git clone git@github.com:msforest/gitskills.git
