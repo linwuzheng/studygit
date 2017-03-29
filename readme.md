@@ -1,5 +1,7 @@
-#git入门手册（资料来源：[liaoxuefeng](www.liaoxuefeng.com))
-##1.安装git
+# git入门手册（资料来源：[liaoxuefeng](http://www.liaoxuefeng.com))
+
+## 1.安装git
+
  1.1 本人使用windows环境，所以只要下载，然后傻瓜式安装就行。下载地址：[git-for-windows](https://git-for-windows.github.io)，安装成功后，右键会有git的一些选项。
  
 	配置全局环境变量
@@ -14,7 +16,8 @@
 	
 	有如上提示，说明未安装git，输入`sudo apt-get install git`命令进行安装，如此简单。都不用下载链接，linux自动帮你完成。
     
-##2.git常用命令
+## 2.git常用命令
+
 	首先要创建版本库（也叫本地仓库），仓库就是普通文件夹，可以右键创建文件夹，也可以使用命令mkdir创建。
 	路径切换到仓库下：
 	$ git init
@@ -43,7 +46,9 @@
 		文件还原，从仓库还原到本地工作区
 	$ git rm <file>
 		删除仓库文件，需结合git commit命令使用
-##3.远程仓库
+		
+## 3.远程仓库
+
 	$ ssh-keygen -t rsa -C "youremail@example.com"
 		创建ssh key
 	$ ssh -T git@github.com
@@ -56,6 +61,7 @@
 		从远处仓库下载到本地工作区
 	$ git clone git@github.com:msforest/gitskills.git gitskills
 		从远处仓库下载到本地指定目录下
+		
 PS:如果在github上修改，本地没有同步的话，本地仓库就无法提交到github上。所以，提交之前需要先将本地和远程数据同步，然后进行提交
 
 [github版本下载](https://desktop.github.com)
