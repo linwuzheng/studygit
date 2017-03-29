@@ -168,11 +168,11 @@ mysql> flush privileges;
 
 ### 5.3 配置
 
-- 复制脚本到/etc/rc.d/init.d目录
+- 复制脚本到/etc/rc.d/init.d目录<br>
 	` cp /usr/local/redis/utils/redis_init_script /etc/rc.d/init.d/redis `
 
-- 更改redis脚本
-	` vi /etc/rc.d/init.d/redis `
+- 更改redis脚本<br>
+	` vi /etc/rc.d/init.d/redis `<br>
 	修改的内容(三处)：
 
 ```
@@ -186,8 +186,8 @@ $EXEC $CONF &
 
 ![redis](images/linux_redis.png)
 
-- 将redis配置文件拷贝到*/etc/redis/${REDISPORT}.conf*
-	` mkdir /etc/redis `
+- 将redis配置文件拷贝到`/etc/redis/${REDISPORT}.conf`<br>
+	` mkdir /etc/redis `<br>
 	` cp /usr/local/redis/redis.conf /etc/redis/6379.conf `
 
 - 将Redis的命令所在目录添加到系统参数PATH中
@@ -198,21 +198,21 @@ $EXEC $CONF &
 
 	文件生效` . /etc/profile  `
 
-- 注册redis服务
+- 注册redis服务<br>
 	` chkconfig --add redis `
 
-- 启动redis服务
+- 启动redis服务<br>
 	` service redis start `
 
 	Ctrl+c 退出，redis在后台开启
 
-- 开启redis密码
+- 开启redis密码<br>
 	密码：在redis.conf里找'requirepass'后加密码，重启redis
 
-- Redis重启数据恢复
+- Redis重启数据恢复<br>
 	数据恢复：在redis.conf里找'appendonly'的no改为yes
 
-- 初始化值
+- 初始化值<br>
 	设置两个值从10000开始
 ```
 [ > set SEQ.KEY 10000 ]    //java使用的key从10000开始
@@ -291,7 +291,7 @@ set JAVA_OPTS=-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port
 
 在cmd中敲入：jconsole（这个exe令在C:\Program Files\Java\jdk1.6.0_23\bin，即安装目录的bin下），即可启动jconsole的管理界面，在界面中输入如下内容：
 
-** service:jmx:rmi:///jndi/rmi://192.168.46.172:9008/jmxrmi **
+<b> service:jmx:rmi:///jndi/rmi://192.168.46.172:9008/jmxrmi </b>
 
 需要密码验证的配置参考该[文章](http://my.oschina.net/u/1164238/blog/135866)
 
