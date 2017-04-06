@@ -37,15 +37,15 @@
 - 我在此项目中担任JAVA开发，所用到的技术有java、sql、spring、mybatis、svn，前期主要负责业务接口的实现和SQL编写，后期负责服务器环境的搭建，学习linux基本命令，在经理的指导下优化项目性能，独立为项目配置了Ehcache缓存，并学会使用jdk自带的jconsole工具分析接口性能；
 - 在实习阶段就能够独立完成完成开发任务，并有过带新员工入门的经历；
 - 独自挑战前端知识，把整个项目中页面使用到的主键id换成xxx-sn，没有留下缺陷；
-- 离职前整理项目所使用到的技术并教会同事如何使用；
+- 整理项目所使用到的[技术文档](ito.md)并教会同事如何使用；
 
 ---
 
 # 技能清单
 
 
-- 语言：Javascript/html5/css3/java
-- 框架：AngularJS/spring
+- 语言：Javascript(es6)/html5/css3/java
+- 框架：AngularJS/Spring
 - 开发工具：sublime text3/eclipse
 - 数据库相关：MySQL
 - 版本管理工具：Svn/Git
