@@ -64,6 +64,20 @@
 		
 PS:如果在github上修改，本地没有同步的话，本地仓库就无法提交到github上。所以，提交之前需要先将本地和远程数据同步，然后进行提交
 
+## 4.同步与合并
+	
+	$ git remote -v
+		查看远程仓库
+	$ git fetch origin master:temp
+		在本地新建一个temp分支，并将远程origin仓库的master分支代码下载到本地temp分支
+	$ git diff temp
+		比较本地仓库与下载的temp分支
+	$ git merge temp
+		合并temp分支到本地的master分支
+	$ git branch -d temp 
+		删除temp分支
+
+
 [github版本下载](https://desktop.github.com)
 
 > 工欲善其事，必先利其器。 ​ 出自：《论语·卫灵公》
