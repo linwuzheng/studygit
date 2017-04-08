@@ -3,7 +3,7 @@
         <h2>热门城市:</h2>
         <div class="bottom">
             <ul>
-                <li ng-repeat="city in hotCities"><a href="" ui-sref="city({city: city})">{{city}}</a></li>
+                <li ng-repeat="city in hotCities track by $index"><a href="" ui-sref="city({city: city})">{{city}}</a></li>
             </ul>
         </div>
     </div>
@@ -11,8 +11,7 @@
         <h2>全部城市:</h2>
         <div class="bottom">
             <ul>
-                <!-- <li class="letter">A.</li>
-                        <li class="list">北京</li> -->
+                <!-- <li class="list" ng-repeat="city in AllCities track by $index"><a href="" ui-sref="city({city: city})">{{city}}</a></li> -->
             </ul>
         </div>
     </div>

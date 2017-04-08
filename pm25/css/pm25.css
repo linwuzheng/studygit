@@ -3,7 +3,7 @@ body{
 	background-size: 100% 400px;
 }
 [ng-cloak]{
-	display: none;
+	display: none!important;
 }
 /* 	header	*/
 	header nav {

@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>pm25.in</title>
     <link rel="shortcut icon" href="favicon.ico" />
-    <!-- <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/pm25.css">
-    <script type="text/javascript" src="../angular/js/jquery.js"></script>
-    <script type="text/javascript" src="../angular/js/angular.js"></script>
-    <script type="text/javascript" src="../angular/js/angular-ui-router.js"></script>
-    <script type="text/javascript" src="js/hz-py.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/iscroll.css">
+    <script type="text/javascript" src="js/common/jquery.js"></script>
+    <script type="text/javascript" src="js/common/angular.js"></script>
+    <script type="text/javascript" src="js/common/angular-ui-router.js"></script>
+    <!-- <script type="text/javascript" src="js/common/iscroll.js"></script> -->
+    <script type="text/javascript" src="js/common/iscroll-probe.js"></script>
+    <script type="text/javascript" src="js/common/hz-py.js"></script>
+    <script type="text/javascript" src="js/service.js"></script>
+    <script type="text/javascript" src="js/pm25.js"></script>
 </head>
 <body ng-app='pm25' ng-cloak>
     <div class="container">
@@ -24,7 +28,7 @@
                     <li><a href=''>排行榜</a></li>
                     <li><a href=''>api文档</a></li>
                     <li><a href=''>赞助我们</a></li>
-                    <li><a href=''>关于</a></li>
+                    <li><a href='' ui-sref='iscroll'>关于</a></li>
                 </ul>
                 <a id="menu-toggle" class="menu-toggle"><span>menu</span></a>
             </nav>
@@ -73,6 +77,6 @@
         }
     }, false);
 </script>
-<script type="text/javascript" src="js/pm25.js"></script>
+
 </body>
 </html>
