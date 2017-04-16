@@ -1,0 +1,74 @@
+/* 标签重定义 */
+body {
+    background: #ddd;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #444;
+    text-decoration: none;
+}
+a:hover {
+    color: #999;
+}
+#title {
+    margin: 20px auto;
+    text-align: center;
+    width: 600px;
+}
+/* 定义关键帧 */
+@keyframes shade {
+    0% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#wrap {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+ul#wrap li {
+    width: 280px;
+    height: auto;
+    list-style-type: none;
+    padding: 10px;
+    float: left;
+}
+li.shadow {
+    animation: shade 1s ease-in 1;
+}
+.box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 11px #666;
+    height: auto;
+    padding: 10px;
+    width: 260px;
+}
+.box img {
+    border-radius: 5px;
+    height: auto;
+    margin: 0 auto;
+    width: 260px;
+}
+.box img:hover {
+    animation: shade 3s ease-in-out 1;
+}
+.box a {
+    color: #666;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    text-align: center;
+    width: 260px;
+}
