@@ -1,2 +1,1 @@
-pm25是参考[www.pm25.in](http://www.pm25.in)编写的一个网站，使用angular1框架，页面使用了响应式布局的样式
-尚未完成，目前只把首页搭建起来了
+pm25是参考[www.pm25.in](http://www.pm25.in)编写的一个网站，用来汇总所学到的技能，如angular1框架，css3响应式布局，iscroll插件，通讯录排序；
