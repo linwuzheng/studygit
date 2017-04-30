@@ -1,5 +1,5 @@
 
-- git.md 一些git常用指令
+- [git.md](git.md) 一些git常用指令
 
 - ito.md 实习汇总文档
 
