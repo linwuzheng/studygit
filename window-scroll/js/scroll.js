@@ -1,3 +1,5 @@
+// 使用面向对象的形式和不基于jquery进行封装
+
 window.onload = function(){
 	var pbl = new PBL('#wrap');
 	//模拟数据
