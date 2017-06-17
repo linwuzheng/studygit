@@ -76,6 +76,18 @@
             }
         }
     }, false);
+
+
+    // jquery 跨越处理
+    var url = 'http://www.pm25.in/api/querys/pm10.json?callback=?';
+    var param = {
+        city: 'zhuhai',
+        token: '5j1znBVAsnSf5xQyNQyq'
+    };
+    console.log(url);
+    $.getJSON(url, param, function(json){
+        console.log(json);
+    });
 </script>
 
 </body>
