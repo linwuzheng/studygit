@@ -6,5 +6,3 @@
 - [排序算法](paixu.java)
 
 - [boolean和for相关问题](SolveForAndBoolean.java) 
-
-- [个人简历](web.md)
