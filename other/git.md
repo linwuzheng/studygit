@@ -61,6 +61,7 @@
 		从远处仓库下载到本地工作区
 	$ git clone git@github.com:msforest/gitskills.git gitskills
 		从远处仓库下载到本地指定目录下
+	$ git remote set-url origin git@github.com:msforest/gitskills.git
 		
 PS:如果在github上修改，本地没有同步的话，本地仓库就无法提交到github上。所以，提交之前需要先将本地和远程数据同步，然后进行提交
 
