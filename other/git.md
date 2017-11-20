@@ -57,6 +57,8 @@
 		验证是否远程链接成功
 	$ git push -u origin master
 		上传到远程仓库
+	$ ssh -T -i ~/.ssh/id_rsa git@github.com
+		输入此命令判断ssh key被哪个用户名占用
 	$ git clone git@github.com:msforest/gitskills.git
 		从远处仓库下载到本地工作区
 	$ git clone git@github.com:msforest/gitskills.git gitskills
