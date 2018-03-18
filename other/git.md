@@ -1,5 +1,7 @@
 # git入门手册（资料来源：[liaoxuefeng](http://www.liaoxuefeng.com))
 
+[pro git2](https://bingohuang.gitbooks.io/progit2/content/)
+
 ## 1.安装git
 
  1.1 本人使用windows环境，所以只要下载，然后傻瓜式安装就行。下载地址：[git-for-windows](https://git-for-windows.github.io)，安装成功后，右键会有git的一些选项。
