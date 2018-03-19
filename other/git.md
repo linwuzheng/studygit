@@ -1,6 +1,6 @@
 # git入门手册（资料来源：[liaoxuefeng](http://www.liaoxuefeng.com))
 
-[pro git2](https://bingohuang.gitbooks.io/progit2/content/)
+[pro git2](https://git-scm.com/book/zh/v2)
 
 ## 1.安装git
 
