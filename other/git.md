@@ -1,5 +1,7 @@
 # git入门手册（资料来源：[liaoxuefeng](http://www.liaoxuefeng.com))
 
+[pro git2](https://git-scm.com/book/zh/v2)
+
 ## 1.安装git
 
  1.1 本人使用windows环境，所以只要下载，然后傻瓜式安装就行。下载地址：[git-for-windows](https://git-for-windows.github.io)，安装成功后，右键会有git的一些选项。
@@ -57,10 +59,13 @@
 		验证是否远程链接成功
 	$ git push -u origin master
 		上传到远程仓库
+	$ ssh -T -i ~/.ssh/id_rsa git@github.com
+		输入此命令判断ssh key被哪个用户名占用
 	$ git clone git@github.com:msforest/gitskills.git
 		从远处仓库下载到本地工作区
 	$ git clone git@github.com:msforest/gitskills.git gitskills
 		从远处仓库下载到本地指定目录下
+	$ git remote set-url origin git@github.com:msforest/gitskills.git
 		
 PS:如果在github上修改，本地没有同步的话，本地仓库就无法提交到github上。所以，提交之前需要先将本地和远程数据同步，然后进行提交
 
