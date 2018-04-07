@@ -1,1 +1,0 @@
-pm25是参考[www.pm25.in](http://www.pm25.in)编写的一个网站，用来汇总所学到的技能，如angular1框架，css3响应式布局，iscroll插件，通讯录排序；
